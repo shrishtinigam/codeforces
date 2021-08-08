@@ -1,8 +1,5 @@
-# Codeforces solution
-A repository showcasing solutions to challenges from codeforces.
-
-My current is code templete is
-
+// Codeforces Round #257 (Div. 2) https://codeforces.com/problemset/problem/450/B
+// JzzhuAndSequences.cpp
 #include <iostream>
 #include <ios>
 #include <vector>
@@ -10,7 +7,6 @@ My current is code templete is
 #include <string>
 #include <cmath>
 #include <set>
-#include <map>
 using namespace std;
 #define rep(i,a,b) for (int i = a; i < b; i++)
 #define rep2(i,a,b) for (int i = a; i > b; i--)
@@ -22,8 +18,11 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+    ll M = 1000000007;
+    ll x, y, d; 
+    cin >> x >> y >> d;
+    vector <ll> v {x, y, y-x, -x, -y, x-y};
+    cout << ((v[(d-1) % 6] % M) + M) % M;
 }
-
-
-I add and remove header files as necessary during practice. During competitions, I use <bits/stdc++.h> to save time.
-I have completed and uploaded the solutions to Ladder 11 of https://a2oj.com/Ladders.html
+    //rep(i, 0, 6)
+        //cout << v[i] << " ";

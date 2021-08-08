@@ -1,4 +1,5 @@
-// DZYLovesChessboard.cpp - unfinished
+// Codeforces Round #254 (Div. 2) https://codeforces.com/problemset/problem/445/A
+// DZYLovesChessboard.cpp
 #include <iostream>
 #include <ios>
 #include <vector>
@@ -18,34 +19,35 @@ int main()
     vector <string> q(n);
     rep(i, 0, n)
         cin >> q[i];
-
+    bool flag = 0;
+    
     rep(i, 0, n)
     {
         rep(j, 0, m)
         {
             if(q[i][j] == '.')
             {
-                if(j&1){
-                if(i&1){
-                    cout<<"W";
+                if(flag == false)
+                {
+                    cout << 'B';
+                    flag = !flag;
                 }
-                else{
-                    cout<<"B";
-                }
-            }
-            else{
-                if(i&1){
-                    cout<<"B";
-                }
-                else{
-                    cout<<"W";
+                else if(flag == true)
+                {
+                    cout << 'W';
+                    flag = !flag;
                 }
             }
-            }
-            else{
-                cout<<arr[i][j];
+            else
+            {
+                cout << '-';
+                flag = !flag;
             }
         }
-        cout<<"\n";
+        if(m % 2 == 0)
+        {
+            flag = !flag;
+        }
+        cout << "\n";
     }
 }
