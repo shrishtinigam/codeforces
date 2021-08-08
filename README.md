@@ -3,6 +3,7 @@ A repository showcasing solutions to challenges from codeforces.
 
 My current is code templete is
 
+```C++
 #include <iostream>
 #include <ios>
 #include <vector>
@@ -23,6 +24,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 }
+```
 
 
 I add and remove header files as necessary during practice. During competitions, I use <bits/stdc++.h> to save time.
